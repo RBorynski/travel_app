@@ -1,0 +1,18 @@
+
+
+  <h1> Check It Out! </h1>
+    <h2>Remember Everywhere When You're There!
+
+     What would you like to do?
+    </h2>
+    <h3> If you're a first time user:.............no logins!</h3>
+   <ul>
+  <% everyTrip.forEach(function(everyTrip){ %>
+       <li><%= everyTrip.name %>: <%= everyTrip.type%> : <%=everyTrip.location%> : <%=everyTrip.comments%> </li>
+  <% }); %>
+</ul>
+
+<a href="CheckItOut/New" class="CRUDButton">Planning a New Trip</a>
+<a href="CheckItOut/CheckOff" class="CRUDButton">Checked It Out, Now Check It Off</a>
+<a href="CheckItOut/Edit" class="CRUDButton">Change of Plans</a>
+
