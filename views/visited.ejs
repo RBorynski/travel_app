@@ -1,0 +1,8 @@
+<ul>
+  <% Trip.forEach(function(Trip){ %>
+
+        <span><%= Trip.landmark %>: <%= Trip.city %> : <%=Trip.comment %> : <%=Trip.visited %>
+
+        </span>
+  <% }); %>
+</ul>
