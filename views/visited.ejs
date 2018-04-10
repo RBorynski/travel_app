@@ -1,8 +1,33 @@
+<body>
+<h1>Keep Track of Where You've Been!</h1>
 <ul>
   <% Trip.forEach(function(Trip){ %>
 
-        <span><%= Trip.landmark %>: <%= Trip.city %> : <%=Trip.comment %> : <%=Trip.visited %>
 
-        </span>
+<div class = description>
+ <span class = category> Landmark </span> <%= Trip.landmark %>
+ <span class = category> City </span>  <%= Trip.city %>
+  <span class = category> Comment </span><%=Trip.comment %> </div>
   <% }); %>
+
 </ul>
+<!-- making a list of all of the places that the user has already visited -->
+</body>
+<style>
+.description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.category {
+  color: red;
+
+}
+body { display : flex;
+      flex-direction: column;
+      align-items : center;
+      background: rgba(63, 92, 14, 0.1);
+
+       }
+</style>
+

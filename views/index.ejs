@@ -7,16 +7,44 @@
   <head>
     <title></title>
      <style>
-        p {
+     body {
+      background: rgba(63, 92, 14, 0.1);
+
+      }
+
+
+       p {
           border-bottom: 1px solid #999;
         }
-        button {
-          float: left;
-        }
-    span {margin-left: 20px}
+
+     .category {
+      color: red;
+     }
+     .links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+     }
+
+     .itin {
+      display : flex;
+      flex-direction: column;
+      align-items : center;
+           }
+
+      button {
+        margin: 10px;
+
+      }
+
+    ul {
+     border color: black;
+    }
      </style>
        </head>
+    }
   <body>
+  <div class = itin>
   <h1> Check It Out! </h1>
     <h2>Remember Everywhere When You're There!
 
@@ -24,18 +52,33 @@
     </h2>
     <h3> If you're a first time user:.............no logins!</h3>
    <ul>
+   <!--  opening the Javascript -->
+
+
   <% everyTrip.forEach(function(everyTrip){ %>
+
         <form action="CheckItOut/<%=everyTrip.id%>" method="POST">
             <button type="submit">✔️ Visited!</button>
         </form>
-        <span><%= everyTrip.landmark %>: <%= everyTrip.city %> : <%=everyTrip.comment %> : <%=everyTrip.visited %></span>
-      </p>
-  <% }); %>
-</ul>
+        <form >
+            <button type="submit" formmethod="POST" formaction="CheckItOut/<%=everyTrip.id%>/delete?_method=DELETE">✔️ Delete</button>
+        </form>
+       <!--  closing the Javascript -->
+        <div class = description>
+        <span class = category> Landmark </span> <%= everyTrip.landmark %>
+       <span class = category> City </span> <%= everyTrip.city %>
+       <span class = category> Comment </span> <%=everyTrip.comment %><%
 
+
+     }); %>
+       </div>
+</ul>
+</div>
+<div class = links>
 <a href="CheckItOut/New" class="CRUDButton">Planning a New Trip</a>
 <a href="CheckItOut/AlreadyVisited" class="CRUDButton">Been There, Done That</a>
-  </body>
+ </div>
+<!-- linking index to other pages -->
+   </body>
   </html>
-
 

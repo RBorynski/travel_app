@@ -1,0 +1,13 @@
+
+PROJECT NAME: "Check It Out"
+Description: My project is a crud travel itinerary. 
+FRONTEND
+A user can keep track of all the places that they plan to visit. Once the user has 'checked out' a location, he/she can 'check it out' from the index page, and  it will appear on the visited view. BACKEND TRANSLATION: Every time a user creates a new location that they want to go visit, the Boolean value for that entry is set to "false" by default. Each of the locations the users plans to visit has a button attached it which has one simple function: to change that boolean from from false to true using the MarkVisited module. This simple step, however, makes listing the locations that the user plans to visit and those they have visited simple. The 'notVisited' module selects all the locations from the plans table that have a visited value of false, which I render in the index view. I used another module, Visited, to select all entries into the plans table that have a value of true in the visited column and render them in Visited view. 
+
+
+Successes: MVP satisfied , full CRUD implementation, Flexbox implementation, commenting (understanding what is going on)
+
+Shortcomings/ Post MVP: The first feature of 'Check It Out' I plan to fix is to  change the method by which new locations are added from primitive text imput. Instead, I want users to be able to type in a city that they are going to, and through an API, get back a list of landmarks in / around that city that they can click on. I would change the "Create" module to insert whatever the users click into the plans table. 
+The API I plan to use is Google Places, but someone suggested to me to chain that with the Geocode API. Chaining 2 APIs sounds like an interesting challenge. Another feature that I plan to add is that when users click that they have visited a location, they can insert pictures of their adventures. I would do this by making another table just for pic urls (with a location column) that I could join with the plans table by location. 
+Some more ambitious Post MVPs include a social media layer to the app, where friends get notifications when another friend plans to go the same location as them (to encourage them to travel together). Another feauture would be that when a user is searching for landmarks to add to their itinerary, they view the photo albums that their friends added of the specific landmarks and get the opportunity to ask their friend about the place.
+Although I am happy that I was able to implement flexbox into the project, I did so on a very basic level design wise in order to just learn the ropes of Flexbox, and I will update the design when I get the time. 

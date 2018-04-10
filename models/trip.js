@@ -11,8 +11,9 @@ const Trip = {}
 //   /*optional stuff to do after success */
 // });
 Trip.notVisited = () => { return db.any('SELECT * FROM plans_table WHERE visited = false');}
+//all the places that you have not visited
 Trip.Visited = () => { return db.any('SELECT * FROM plans_table WHERE visited = true');}
-
+// all the places that you have visited
 
 
 
@@ -37,9 +38,11 @@ Trip.Create = tripData => {
  {
   return db.none('UPDATE plans_table SET visited = $1 WHERE id = $2', [true, id ]);
 }
-Trip.Delete = (subject) => {
-  return db.result('DELETE FROM plans_table WHERE subject = $1', [subject]);
+//make that someone has visited a place when they do click on a button
+Trip.Delete = (id) => {
+  return db.none('DELETE FROM plans_table WHERE id = $1', [id]);
 }
+//deletes from the plans table if you change your about going somewhere
 
 
 module.exports = Trip;
