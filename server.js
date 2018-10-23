@@ -47,7 +47,7 @@ app.delete("/CheckItOut/:id/delete", (request, response) => {
   const landmarkId = request.params.id;
   //sets a  variable for parameter in the ID
   Delete(landmarkId);
-  response.redirect("/CheckItOut");
+  response.redirect("/");
   //redirect to the already visited tav
 });
 
