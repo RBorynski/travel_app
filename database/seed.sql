@@ -1,4 +1,4 @@
-\c tourist_database
+-- \c tourist_database
 INSERT INTO plans_table
   (landmark, city, comment, visited)
 VALUES
