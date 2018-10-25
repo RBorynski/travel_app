@@ -79,6 +79,14 @@ app.post("/CheckItOut", urlencodedParser, (request, response) => {
 // const passwordEnteredByUser = data.password;
 // const passwordToSend = brcypt.
 
-app.listen(PORT, () => {
-  console.log(`server is listening on PORT ${PORT} baby!`);
+// app.listen(PORT, () => {
+//   console.log(`server is listening on PORT ${PORT} baby!`);
+// });
+
+app.listen(process.env.PORT || 3000, function() {
+  console.log(
+    "Express server listening on port %d in %s mode",
+    this.address().port,
+    app.settings.env
+  );
 });
