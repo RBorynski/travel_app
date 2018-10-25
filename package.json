@@ -12,6 +12,7 @@
     "method-override": "^2.3.10",
     "nodeman": "^1.1.2",
     "nodemon": "^1.17.2",
+    "npm": "^6.4.1",
     "parser": "^0.1.4",
     "pg-promise": "^8.2.2",
     "save": "^2.3.2"
