@@ -19,7 +19,7 @@ const notVisited = Trip.notVisited;
 const Create = Trip.Create;
 const MarkVisited = Trip.MarkVisited;
 const findById = Trip.findById;
-const Delete = Trip.Delete;
+const Delete = Trip.Delete; //
 const Visited = Trip.Visited;
 //setting all of the imports as variables
 const bcrypt = require("bcrypt");
