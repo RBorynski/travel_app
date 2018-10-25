@@ -10,7 +10,7 @@ const PORT = 3000;
 const methodOverride = require("method-override");
 app.use(methodOverride("_method"));
 //
-//allows for method override to use in the edit function
+//allows for method override to use in the edit function//
 // app.use("/client", ,express.static('./assets/'))
 // app.use(methodOverride('-method'));
 const jsonParser = bodyParser.json();
