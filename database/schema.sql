@@ -1,6 +1,8 @@
-CREATE DATABASE tourist_database;
+-- CREATE DATABASE
+-- tourist_database;
 
-\c tourist_database;
+-- \c
+-- tourist_database;
 
 DROP TABLE plans_table;
 
