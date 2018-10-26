@@ -27,7 +27,7 @@ const bcrypt = require("bcrypt");
 
 const salt = "$2a$10$9V/bxZfoJlwprsVzhrM1UO";
 
-app.get("/CheckItOut", (request, response) => {
+app.get("/", (request, response) => {
   // run query then resolve promise
   notVisited().then(everyTrip => {
     response.render("index", { everyTrip: everyTrip });
