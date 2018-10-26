@@ -5,7 +5,7 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 const app = express();
 app.set("view engine", "ejs");
-const PORT = 3000;
+// const PORT = 3000;
 //setting the Port as 3000
 const methodOverride = require("method-override");
 app.use(methodOverride("_method"));
@@ -82,11 +82,11 @@ app.post("/CheckItOut", urlencodedParser, (request, response) => {
 // app.listen(PORT, () => {
 //   console.log(`server is listening on PORT ${PORT} baby!`);
 // });
-app.listen(process.env.PORT || port);
-// app.listen(process.env.PORT || 3000, function() {
-//   console.log(
-//     "Express server listening on port %d in %s mode",
-//     this.address().port,
-//     app.settings.env
-//   );
-// });
+
+app.listen(process.env.PORT || 3000, function() {
+  console.log(
+    "Express server listening on port %d in %s mode",
+    this.address().port,
+    app.settings.env
+  );
+});
