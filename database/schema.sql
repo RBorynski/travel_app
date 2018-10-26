@@ -22,3 +22,4 @@ photo_url VARCHAR (255)
 
  -- psql -f ./database/schema.sql
  -- psql -f ./database/seed.sql
+--
